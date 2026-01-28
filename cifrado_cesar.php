@@ -53,7 +53,11 @@ $cifradoDES = [['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p',
             [],
             []];
 
+if ($_POST['desplazamiento'] == null) {
+    $desplazamiento = 0;
+}else {
 $desplazamiento = $_POST['desplazamiento'];
+}
 $longitudABC = count($cifradoDES[0]);
 
 for ($contadorABC = 0; $contadorABC < $longitudABC; $contadorABC++) { 
@@ -76,6 +80,7 @@ for ($contadorTEX = 0; $contadorTEX < strlen($texto); $contadorTEX++) {
         }
     }
 }
+
 echo "<strong>--- ORDENACION CESAR ---</strong><br><br>";
 echo "<strong>Texto original: </strong>" . $texto . "<br><br>";
 echo "<br><strong> ORDENACION POR DESPLAZAMIENTO</strong><br><br>";
@@ -122,16 +127,19 @@ $cifradoALE = [['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p',
                 [],
                 []];
 
+// aqui relleno de 0 a 28
 for ($contadorALE=0; $contadorALE < $longitudABC; $contadorALE++) { 
   $cifradoALE[1][$contadorALE] = $contadorALE;
 }
-
+// lo barajo
 shuffle($cifradoALE[1]);
 
+// muevo la letra segun el nuevo indice y las ordeno
 for ($contadorPOS=0; $contadorPOS < $longitudABC; $contadorPOS++) { 
   $cifradoALE[2][$cifradoALE[1][$contadorPOS]] = $cifradoALE[0][$contadorPOS];
 }              
 
+// y aqui busco la letra en el texto y la sustituyo por la letra ya cifrada
 for ($contadorTEX = 0; $contadorTEX < strlen($texto); $contadorTEX++) { 
     $letraBuscar = $texto[$contadorTEX];
     for ($contadorLetras = 0; $contadorLetras < $longitudABC; $contadorLetras++) { 
@@ -142,6 +150,7 @@ for ($contadorTEX = 0; $contadorTEX < strlen($texto); $contadorTEX++) {
     }
 }
 
+// aqui es para que se vean ordenadas ese array, por que como arriba se van enviando de a b c, llegan igual aunque su indice sea distinto
 ksort($cifradoALE[2]);
 
 
