@@ -1,0 +1,33 @@
+.tabla-cifrado {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 20px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    display: block;
+}
+.tabla-cifrado th, .tabla-cifrado td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+    min-width: 25px;
+}
+.tabla-cifrado th {
+    background-color: #4c7caf;
+    color: white;
+    font-weight: bold;
+}
+.tabla-cifrado tr{
+    background-color: #c7e4f0;
+}
+.titulo-fila {
+    background-color: #1a1c41;
+    color: white;
+    text-align: left;
+    left: 0;
+}
+body{
+    margin: 10px;
+    padding: 10px;
+    font-family: verdana;
+}

@@ -2,41 +2,7 @@
 
 <head>
   <title>Jose Pedro - Ordenacion Cesar</title>
-  <Style>
-    .tabla-cifrado {
-        border-collapse: collapse;
-        width: 100%;
-        margin-bottom: 20px;
-        font-family: Arial, sans-serif;
-        font-size: 14px;
-        display: block;
-    }
-    .tabla-cifrado th, .tabla-cifrado td {
-        border: 1px solid #ddd;
-        padding: 8px;
-        text-align: center;
-        min-width: 25px;
-    }
-    .tabla-cifrado th {
-        background-color: #4c7caf;
-        color: white;
-        font-weight: bold;
-    }
-    .tabla-cifrado tr{
-        background-color: #c7e4f0;
-    }
-    .titulo-fila {
-        background-color: #1a1c41;
-        color: white;
-        text-align: left;
-        left: 0;
-    }
-    body{
-      margin: 10px;
-      padding: 10px;
-      font-family: verdana;
-    }
-  </Style>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -48,10 +14,10 @@ $textoDES = "";
 $textoALE = "";
 strtolower($texto);
 
-$cifradoDES = [['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z',' ',',','.'],
-            [],
-            [],
-            []];
+$cifradoDES =  [['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z',' ',',','.'],
+                [],
+                [],
+                []];
 
 $desplazamiento = $_POST['desplazamiento'];
 $longitudABC = count($cifradoDES[0]);
@@ -118,7 +84,7 @@ echo "</table>";
 // 5. MUESTRO EL TEXTO
 echo "<br><strong>Texto cifrado por desplazamiento fijo : </strong>".$textoDES."<br><br>";
 
-$cifradoALE = [['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z',' ',',','.'],
+$cifradoALE =  [['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z',' ',',','.'],
                 [],
                 []];
 
@@ -143,7 +109,6 @@ for ($contadorTEX = 0; $contadorTEX < strlen($texto); $contadorTEX++) {
 }
 
 ksort($cifradoALE[2]);
-
 
 echo "<br><br><strong> ORDENACION POR POSICION ALEATORIA</strong><br><br>";
 echo "<table class='tabla-cifrado'>";
@@ -184,7 +149,6 @@ echo "</table>";
 
 // 5. MUESTRO EL TEXTO
 echo "<br><strong>Texto cifrado por posicion aleatorio : </strong>".$textoALE;
-
 
 ?>  
   
