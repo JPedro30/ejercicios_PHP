@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORMULARIO ALUMNO</title>
+    <style>
+        body{
+            background: lightcyan;
+            font-family: Verdana;
+        }
+        h1{
+            text-align: center;
+            margin-top: 5px;
+        }
+        .formulario{
+            border: solid 2px black;
+            border-radius: 10px;
+            background: whitesmoke;
+            padding: 30px;
+            height: 230px;
+            width: 330px;
+            margin: 50px auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="formulario">
+
+        <h1>ALTA ALUMNO</h1>
+        <form action="insertarAlumno.php" method="post">
+            Ingrese nombre:
+            <input type="text" name="nombre"><br><br>
+            Ingrese mail:
+            <input type="text" name="mail"><br><br>
+            Seleccione el curso:
+            <select name="codigocurso">
+                <option value="1">PHP</option>
+                <option value="2">ASP</option>
+                <option value="3">JSP</option>
+            </select>
+            <br><br>
+            <input type="submit" value="Registrar">
+        </form>
+
+
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SELECTOR EMAIL</title>
+</head>
+<body>
+    <form action="selectorEmail.php" method="post">
+        Seleccione de que curso quiere buscar a los alumnos:
+        <select name="curso">
+            <option value="1">PHP</option>
+            <option value="2">ASP</option>
+            <option value="3">JSP</option>
+        </select><br>
+        Introduzca un nombre:
+        <input type="text" name="nombre" pattern="[A-Za-záéíóúÁÉÍÓÚñÑ]+"><br>
+        <input type="submit" value="BUSCAR">
+    </form>
+</body>
+</html>
